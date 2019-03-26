@@ -1,22 +1,23 @@
 import React from  'react';
-import {NavLink} from 'react-router-dom';
 
-const Header = () => (
-    <header>
-        <h1> Portfolio </h1>
-            <NavBar/>
-    </header>
-);
+class Header extends React.Component{
 
-const NavBar = () =>(
-    <div>
-        <ul>
-        <NavLink to='/' activeClassName="isActive" exact={true}> Home </NavLink>
-        <NavLink to='/portfolio' activeClassName="isActive" exact={true}> Portfolio </NavLink>
-        <NavLink to='/contact' activeClassName="isActive"> Contact</NavLink>
+        state = {
+            barsClassName: false
+        };
 
-        </ul>
-    </div>
-);
+    handleBarsClick = () =>{
+        this.setState(() =>({barsClassName: !this.state.barsClassName}));
+    }
+
+    render(){
+        return(
+            <header>
+            <a href="#" className="logo"> KOFI | AGT</a>
+            <div className={this.state.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={this.handleBarsClick}></div>
+            </header>
+        )
+    }
+}
 
 export default Header;

@@ -6,8 +6,7 @@ class Home extends React.Component{
         return(
             <div className="Home">
             <section>
-                <h1> Welcome </h1>
-                <p> This is my site. Take a look aroud!</p>
+            <Header/>
             </section>
 
             </div>

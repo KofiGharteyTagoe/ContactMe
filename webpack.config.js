@@ -26,12 +26,16 @@ module.exports = {
 
             },{
                 test:/\.(gif|png|jpe?g|svg)$/i,
+                include : path.join(__dirname, 'src/images'),
                 use:[
                     "file-loader",
 
                     {
                         loader: "image-webpack-loader",
                         options: {
+                            name: '[name].[ext]',
+                            outputPath: 'img',
+                            publicPath: 'img/',
                             gifsicle:{
                                 interlaced: false
                             },
