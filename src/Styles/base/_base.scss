@@ -1,0 +1,35 @@
+//rem sizing is better for accessibility
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: Helvetica, Arial,  sans-serif;
+    font-size: $m-size;
+    background-color: white;
+    min-height: 100vh;
+    color: white;
+}
+
+
+
+button{
+    cursor: pointer;
+}
+
+button:disabled{
+    cursor: default;
+}
+
+.isActive{
+    font-weight: bold
+}
+
+NavLink{
+    margin: 1rem;
+}
