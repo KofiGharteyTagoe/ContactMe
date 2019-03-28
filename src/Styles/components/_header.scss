@@ -1,11 +1,11 @@
 Header{
     position: relative;
-    padding: 0px 100px 0px 100px;
+    padding: $side-padding-large;
     margin: 0px auto 40px;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.01);
     box-sizing: border-box;
     border-radius: 0px;
-    box-shadow: 0 2px 5px rgba(0,0,0, 0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0, 0.05);
     height: 100px;
 }
 .clearfix{
@@ -54,4 +54,18 @@ Header{
     content: '\f0c9';
     font-family: fontAwesome;
     line-height: 40px;
+
+
+}
+
+.blurrable{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+@media (max-width: $desktop-breakpoint){
+    Header{
+        padding: $side-padding-small;
+    }
+
 }

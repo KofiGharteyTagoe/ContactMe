@@ -34,8 +34,6 @@ module.exports = {
                         loader: "image-webpack-loader",
                         options: {
                             name: '[name].[ext]',
-                            outputPath: 'img',
-                            publicPath: 'img/',
                             gifsicle:{
                                 interlaced: false
                             },

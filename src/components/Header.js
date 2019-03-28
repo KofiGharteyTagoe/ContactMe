@@ -2,9 +2,13 @@ import React from  'react';
 
 class Header extends React.Component{
 
-        state = {
+    constructor(props){
+        super(props);
+
+        this.state = {
             barsClassName: false
         };
+    }
 
     handleBarsClick = () =>{
         this.setState(() =>({barsClassName: !this.state.barsClassName}));
@@ -14,7 +18,7 @@ class Header extends React.Component{
         return(
             <header>
             <a href="#" className="logo"> KOFI | AGT</a>
-            <div className={this.state.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={this.handleBarsClick}></div>
+            <div className={this.state.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={() =>{this.handleBarsClick(); this.props.blurred() }}  ></div>
             </header>
         )
     }

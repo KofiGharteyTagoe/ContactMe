@@ -5,6 +5,10 @@
     padding: 0px;
 }
 
+a{
+    text-decoration: none;
+}
+
 html{
     font-size: 62.5%;
 }
@@ -32,4 +36,18 @@ button:disabled{
 
 NavLink{
     margin: 1rem;
+}
+
+hr{
+    width: 50%;
+}
+
+//Text and font sizes
+
+h1{
+    font-size: 8.8rem;
+}
+
+h2{
+    font-size: 6.0rem;
 }
