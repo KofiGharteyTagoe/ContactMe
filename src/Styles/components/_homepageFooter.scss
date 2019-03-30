@@ -89,8 +89,29 @@ footer{
     height: 350px;
     margin: 22px;
     color: #470101;
-
+    transition: 1s ease-out;
     animation: float 6s ease-in-out infinite;
+  }
+
+  .card:hover{
+    background: rgb(255, 255, 255);
+  }
+
+  .card>   p{
+      font-size: 1.3em;
+  }
+
+  .hideFooter .floatingFooter{
+    opacity: 0;
+    -webkit-transition: all 20s ease;  
+    -moz-transition: all 20s ease;  
+    -o-transition: all 20s ease;  
+    -ms-transition: all 20s ease;  
+    transition: all 20s ease;
+  }
+
+  .displayFooter .floatingFooter{
+    opacity: 1;
   }
 
   .shadow{
@@ -102,3 +123,34 @@ footer{
     -webkit-filter: blur(12px);
     animation:grow 6s ease-in-out infinite;
   }
+
+  .menu-options{
+    margin-top: 5em;
+    margin-bottom: 2em;
+  }
+
+  .menu-options::before{
+    color: #470101;
+    font-family: fontAwesome;
+    font-size: 4em;
+    margin: 23%;
+}
+
+
+
+.aboutme-option::before{
+    content: '\f007';
+    
+}
+
+.contactme-option::before{
+    content: '\f2b9';
+}
+
+.portfolio-option::before{
+    content: '\f0ea';
+}
+
+.blog-option::before{
+    content: '\f09e';
+}

@@ -16,9 +16,9 @@ class HomePageFooter extends React.Component{
             <NavLink to="/aboutme">
               <div className="column">
                 <div className="card">
-                  <h3>About Me</h3>
-                  <p>Some text</p>
-                  <p>Some text</p>
+                <div className="menu-options aboutme-option"></div>
+                <hr/>
+                  <p>About Me</p>
                 </div>
                 <div className="shadow"></div>
               </div>
@@ -27,9 +27,9 @@ class HomePageFooter extends React.Component{
             <NavLink to="/contactme">
               <div className= {`${this.props.cardsShow} column`}>
                 <div className="card">
-                  <h3>Contact Me</h3>
-                  <p>Some text</p>
-                  <p>Some text</p>
+                <div className="menu-options contactme-option"></div>
+                <hr/>
+                  <p>Contact Me</p>
                 </div>
                 <div className="shadow"></div>
               </div>
@@ -38,9 +38,9 @@ class HomePageFooter extends React.Component{
             <NavLink to="/portfolio">
               <div className="column">
                 <div className="card">
-                  <h3>Portfolio</h3>
-                  <p>Some text</p>
-                  <p>Some text</p>
+                <div className="menu-options portfolio-option"></div>
+                <hr/>
+                  <p>Portfolio</p>
                 </div>
                 <div className="shadow"></div>
               </div>
@@ -49,9 +49,9 @@ class HomePageFooter extends React.Component{
             <NavLink to="/blog">
               <div className="column">
                 <div className="card">
-                  <h3>Blog</h3>
-                  <p>Some text</p>
-                  <p>Some text</p>
+                <div className="menu-options blog-option"></div>
+                <hr/>
+                  <p>Blog</p>
                 </div>
                 <div className="shadow"></div>
               </div>
