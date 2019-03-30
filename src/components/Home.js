@@ -7,14 +7,15 @@ class Home extends React.Component{
 
     state={
         isBlured: '',
-        menuIsClicked: 'hideFooter'
+        menuIsClicked: 'hideFooter',
+        cardsShow: ''
     };
 
     HandleOptionsClick = () =>{
         if(this.state.isBlured.valueOf()=== ''){
-            this.setState(() =>({isBlured: 'blurrable', menuIsClicked: 'displayFooter floatingFooter'}));
+            this.setState(() =>({isBlured: 'blurrable', menuIsClicked: 'displayFooter floatingFooter', cardsShow: 'cardsShow'}));
         } else{
-            this.setState(() =>({isBlured: '', menuIsClicked: 'hideFooter floatingFooter'}));
+            this.setState(() =>({isBlured: '', menuIsClicked: 'hideFooter floatingFooter', cardsShow:''}));
         }
         
     }
@@ -22,7 +23,7 @@ class Home extends React.Component{
     render(){
         return(
             <div className="Home">
-                <section>
+                <section className="headerSection">
                     <Header blurred={this.HandleOptionsClick}/>
                 </section>
 
@@ -30,7 +31,7 @@ class Home extends React.Component{
                     <HomePageMidSection explore={this.HandleOptionsClick}/>
                 </section>
 
-                    <HomePageFooter FooterclassName={this.state.menuIsClicked}/>
+                    <HomePageFooter FooterclassName={this.state.menuIsClicked} cardsShow={this.state.cardsShow}/>
 
             </div>
         )

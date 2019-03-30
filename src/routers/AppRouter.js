@@ -6,6 +6,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import Home from '../components/Home';
 import Portfolio from '../components/Portfolio';
 import ContactMe from '../components/ContactMe';
+import AboutMe from '../components/AboutMe';
 import PortfolioPages from '../components/PortfolioPages';
 
 
@@ -16,7 +17,8 @@ const AppRouter = () => (
                 <Route exact path='/' component={Home} />
                 <Route path='/portfolio' component={Portfolio} exact={true}/>
                 <Route path='/portfolio/:id' component={PortfolioPages}/>
-                <Route path='/contact' component={ContactMe}/>
+                <Route path='/contactme' component={ContactMe}/>
+                <Route path='/aboutme' component={AboutMe}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

@@ -7,11 +7,16 @@ Header{
     border-radius: 0px;
     box-shadow: 0 2px 5px rgba(0,0,0, 0.05);
     height: 100px;
+    cursor: pointer;
+    z-index: 3;
 }
 .clearfix{
     clear: both;
 }
 
+.headerSection{
+    z-index: 3;
+}
 
 .logo{
     color: white;
@@ -61,6 +66,7 @@ Header{
 .blurrable{
     filter: blur(8px);
     -webkit-filter: blur(8px);
+    position: relative;
 }
 
 @media (max-width: $desktop-breakpoint){

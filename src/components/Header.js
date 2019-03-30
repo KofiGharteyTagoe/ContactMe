@@ -1,4 +1,5 @@
 import React from  'react';
+import {NavLink} from 'react-router-dom';
 
 class Header extends React.Component{
 
@@ -17,7 +18,8 @@ class Header extends React.Component{
     render(){
         return(
             <header>
-            <a href="#" className="logo"> KOFI | AGT</a>
+            <NavLink to="/"> <span className="logo"> KOFI | AGT</span> </NavLink>
+
             <div className={this.state.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={() =>{this.handleBarsClick(); this.props.blurred() }}  ></div>
             </header>
         )

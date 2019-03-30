@@ -12,38 +12,51 @@ class HomePageFooter extends React.Component{
             
             <div className={this.props.FooterclassName}>
             <div className="row">
-            <div className="column">
-              <div className="card">
-                <h3>Card 1</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+
+            <NavLink to="/aboutme">
+              <div className="column">
+                <div className="card">
+                  <h3>About Me</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div className="shadow"></div>
               </div>
-            </div>
-          
-            <div className="column">
-              <div className="card">
-                <h3>Card 2</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+            </NavLink>
+
+            <NavLink to="/contactme">
+              <div className= {`${this.props.cardsShow} column`}>
+                <div className="card">
+                  <h3>Contact Me</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div className="shadow"></div>
               </div>
-            </div>
+            </NavLink>
             
-            <div className="column">
-              <div className="card">
-                <h3>Card 3</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+            <NavLink to="/portfolio">
+              <div className="column">
+                <div className="card">
+                  <h3>Portfolio</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div className="shadow"></div>
               </div>
-            </div>
-            
-            <div className="column">
-              <div className="card">
-                <h3>Card 4</h3>
-                <p>Some text</p>
-                <p>Some text</p>
+            </NavLink>
+
+            <NavLink to="/blog">
+              <div className="column">
+                <div className="card">
+                  <h3>Blog</h3>
+                  <p>Some text</p>
+                  <p>Some text</p>
+                </div>
+                <div className="shadow"></div>
               </div>
-            </div>
-          </div>         
+            </NavLink>
+          </div> 
             </div>
 
         )

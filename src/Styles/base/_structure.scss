@@ -1,0 +1,31 @@
+.parent {
+    background: #fff;
+    color: #000;
+    padding-top: 2em;
+
+  }
+  
+
+
+  @media only screen and (min-width: 641px){
+    .parent {
+      display: flex;
+    }
+  }
+  @media only screen and (min-width: 1025px){
+    .main {
+      flex: 1;
+    }
+    .sidebar {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 740px){
+    .main{
+        display: none;
+    }
+    .column{
+        float: none;
+    }
+}

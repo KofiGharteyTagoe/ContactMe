@@ -3,6 +3,7 @@
 *{
     margin: 0px;
     padding: 0px;
+    border-radius: 4px;
 }
 
 a{
@@ -51,3 +52,73 @@ h1{
 h2{
     font-size: 6.0rem;
 }
+
+//body
+
+.wrap{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media(max-width: $desktop-breakpoint){
+
+    .wrap {
+        width: 90%;
+    }
+}
+
+.page{
+    padding-top: 70px;
+}
+
+//bounce effect
+
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		-webkit-transform: translateY(0);
+		-ms-transform:     translateY(0);
+		transform:         translateY(0)
+	}
+	40% {
+		-webkit-transform: translateY(-30px);
+		-ms-transform:     translateY(-30px);
+		transform:         translateY(-30px)
+	}
+	60% {
+		-webkit-transform: translateY(-15px);
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@keyframes grow {
+    0% {
+   -webkit-transform: scale( 0.3 );-moz-transform: scale( 0.3 );-o-transform: scale( 0.3 );-ms-transform: scale( 0.3 );transform: scale( 0.3 );
+     }
+     
+     50% {
+     -webkit-transform: scale( 0.7 );-moz-transform: scale( 0.7 );-o-transform: scale( 0.7 );-ms-transform: scale( 0.7 );transform: scale( 0.7 );
+     }
+     
+     100% {
+     -webkit-transform: scale( 0.3 );-moz-transform: scale( 0.3 );-o-transform: scale( 0.3 );-ms-transform: scale( 0.3 );transform: scale( 0.3 );
+     }
+   }
