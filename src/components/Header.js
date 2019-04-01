@@ -6,13 +6,6 @@ class Header extends React.Component{
     constructor(props){
         super(props);
 
-        this.state = {
-            barsClassName: false
-        };
-    }
-
-    handleBarsClick = () =>{
-        this.setState(() =>({barsClassName: !this.state.barsClassName}));
     }
 
     render(){
@@ -20,7 +13,7 @@ class Header extends React.Component{
             <header>
             <NavLink to="/"> <span className="logo"> KOFI | AGT</span> </NavLink>
 
-            <div className={this.state.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={() =>{this.handleBarsClick(); this.props.blurred() }}  ></div>
+            <div className={this.props.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={() =>{ this.props.blurred(); this.props.changeBarsClassName() }}  ></div>
             </header>
         )
     }

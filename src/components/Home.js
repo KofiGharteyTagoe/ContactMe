@@ -8,7 +8,8 @@ class Home extends React.Component{
     state={
         isBlured: '',
         menuIsClicked: 'hideFooter',
-        cardsShow: ''
+        cardsShow: '',
+        barsClassName: false
     };
 
     HandleOptionsClick = () =>{
@@ -16,22 +17,37 @@ class Home extends React.Component{
             this.setState(() =>({isBlured: 'blurrable', menuIsClicked: 'displayFooter floatingFooter', cardsShow: 'cardsShow'}));
         } else{
             this.setState(() =>({isBlured: '', menuIsClicked: 'hideFooter floatingFooter', cardsShow:''}));
-        }
-        
+        }   
     }
+
+    HandleShowMenuClick = () =>{
+        this.setState(() =>({barsClassName: !this.state.barsClassName}));
+    }
+       
+    
 
     render(){
         return(
             <div className="Home">
                 <section className="headerSection">
-                    <Header blurred={this.HandleOptionsClick}/>
+                    <Header
+                        blurred={this.HandleOptionsClick}
+                        barsClassName={this.state.barsClassName}
+                        changeBarsClassName={this.HandleShowMenuClick}
+                    />
                 </section>
 
                 <section className={this.state.isBlured} >
-                    <HomePageMidSection explore={this.HandleOptionsClick}/>
+                    <HomePageMidSection
+                        explore={this.HandleOptionsClick}
+                        changeBarsClassName={this.HandleShowMenuClick}
+                    />
                 </section>
 
-                    <HomePageFooter FooterclassName={this.state.menuIsClicked} cardsShow={this.state.cardsShow}/>
+                    <HomePageFooter
+                        FooterclassName={this.state.menuIsClicked}
+                        cardsShow={this.state.cardsShow}
+                    />
 
             </div>
         )

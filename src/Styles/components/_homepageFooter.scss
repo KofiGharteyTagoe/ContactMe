@@ -79,17 +79,17 @@ footer{
     padding: 3px;
     text-align: center;
     
-    background: #D3CCE3;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border: 1px solid #352a4e;
+    background: #4b6880;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E9E4F0, #4b6880);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E9E4F0, #4b6880); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid #001627;
     
     justify-content: space-evenly;
     width: 220px;
     height: 350px;
     margin: 22px;
     color: #470101;
-    transition: 1s ease-out;
+    transition: 1s ease-in-out;
     animation: float 6s ease-in-out infinite;
   }
 
@@ -102,16 +102,22 @@ footer{
   }
 
   .hideFooter .floatingFooter{
-    opacity: 0;
+
+    .column{
+         opacity: 0;
     -webkit-transition: all 20s ease;  
     -moz-transition: all 20s ease;  
     -o-transition: all 20s ease;  
     -ms-transition: all 20s ease;  
     transition: all 20s ease;
+    }   
   }
 
   .displayFooter .floatingFooter{
-    opacity: 1;
+    .column{
+           opacity: 1;
+    } 
+ 
   }
 
   .shadow{
