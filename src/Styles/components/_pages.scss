@@ -3,6 +3,10 @@
     margin-top: 6em; 
 }
 
+.spacetop-2em{
+    margin-top: 2em;
+}
+
 section{
     display: block;
 }
@@ -39,6 +43,7 @@ section{
             display: block;
             margin-bottom: 40px;
             padding: 0;
+            position: relative;
 
             p{
                 font-size: 18px;
@@ -51,6 +56,14 @@ section{
                 content: " ";
                 display: table;
             }
+        }
+    }
+
+    .image-header{
+        @extend .intro-header;
+
+        h1:after{
+            background-color: transparent;
         }
     }
 
@@ -281,26 +294,32 @@ input, textfield:focus{
 }
 
 .skillSection{
-    background: #c3c3c3;
-    color: #0a1823;
+    background: #242d34;
+    color: #fff;
     padding-top: 20px;
+    border-radius: 0px;
+    height: 100vh;
 }
 
 .personalImg{
-    width: 400px;
-    height: 400px;
     border: 2px solid #0a1823;
-    border-radius: 3%;
-
+    box-shadow: 0 0 19px rgba(2,2,2,0.5);
     background-size: 100% 100%;
-    width: 269px;
-    height: 514px;
+    width: 380px;
+    height: 760px;
     background-image: url(./../images/kofestar-animation.gif);
     object-fit: contain;
 }
 
 .cImage{
     display: none;
+}
+
+@media(max-width: 900px){
+    .personalImg{
+        width: 290px;
+        height: 600px;
+    }
 }
 
 @media(max-width: $desktop-breakpoint){

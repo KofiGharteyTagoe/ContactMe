@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header_dropDown from './Header_dropDown';
 
 class ContactMe extends React.Component{
     
@@ -16,7 +16,7 @@ class ContactMe extends React.Component{
 
         return(
             <div>
-                <Header/>
+                <Header_dropDown/>
                 <div className="otherPageCartoon" alt="Cartoon Image"> </div>
                     <section className="contact-page page">
                         <div className="wrap">

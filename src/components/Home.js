@@ -29,13 +29,12 @@ class Home extends React.Component{
     render(){
         return(
             <div className="Home">
-                <section className="headerSection">
+                
                     <Header
                         blurred={this.HandleOptionsClick}
                         barsClassName={this.state.barsClassName}
                         changeBarsClassName={this.HandleShowMenuClick}
                     />
-                </section>
 
                 <section className={this.state.isBlured} >
                     <HomePageMidSection

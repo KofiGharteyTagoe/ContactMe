@@ -75,15 +75,9 @@ footer{
     -webkit-box-shadow: 4px -5px 57px -19px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px -5px 57px -19px rgba(0,0,0,0.75);
     box-shadow: 4px -5px 57px -19px rgba(0,0,0,0.75);
-
     padding: 3px;
     text-align: center;
-    
-    background: #4b6880;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E9E4F0, #4b6880);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E9E4F0, #4b6880); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border: 1px solid #001627;
-    
+    background: #d8d8e0;    
     justify-content: space-evenly;
     width: 220px;
     height: 350px;
@@ -95,6 +89,7 @@ footer{
 
   .card:hover{
     background: rgb(255, 255, 255);
+    font-size: larger;
   }
 
   .card>   p{

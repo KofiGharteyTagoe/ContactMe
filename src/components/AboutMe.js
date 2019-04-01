@@ -1,19 +1,9 @@
 import React from 'react';
-import Header from './Header';
+import Header_dropDown from '../components/Header_dropDown';
 import ProgressBar from './ProgressBar';
+import SkillsBar from './SkillsBar';
 
 class AboutMe extends React.Component{
-    constructor(){
-        super();
-
-        this.state={
-            Mendix: 80,
-            HTML: 70,
-            CSS: 70,
-            React: 50,
-
-        }
-    }
 
     handleGithubClick = () => {
 
@@ -28,7 +18,7 @@ class AboutMe extends React.Component{
         return(
             <div className="aboutme">
             <section>
-                <Header/>
+                <Header_dropDown/>
 
                 <div className="wrap spacetop">
                     <div className="qualities ">
@@ -81,8 +71,8 @@ class AboutMe extends React.Component{
 
                 <section className="skillSection">
                 
-                    <div className="wrap spacetop">
-                        <div className="intro-header spacetop">
+                    <div className="wrap spacetop-2em">
+                        <div className="image-header spacetop">
                             <h1>
                                 <div className=" personalImg pImage" alt="Personal Image">></div>
                                 <div className="otherPageCartoon cImage" alt="Cartoon Image"> </div>
@@ -90,10 +80,7 @@ class AboutMe extends React.Component{
                             </h1>
 
                             <div className="html-content">
-                                <ProgressBar percentage={this.state.Mendix} name={'Mendix'}/>
-                                <ProgressBar percentage={this.state.HTML} name={'HTML'}/>
-                                <ProgressBar percentage={this.state.CSS} name={'CSS/SCSS'}/>
-                                <ProgressBar percentage={this.state.React} name={'React'}/>
+                                <SkillsBar/>
                             </div>
                         </div>
                     </div>
