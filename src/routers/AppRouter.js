@@ -7,6 +7,7 @@ import Portfolio from '../components/Portfolio';
 import ContactMe from '../components/ContactMe';
 import AboutMe from '../components/AboutMe';
 import PortfolioPages from '../components/PortfolioPages';
+import Blog from '../components/Blog';
 
 
 const AppRouter = () => (
@@ -18,6 +19,7 @@ const AppRouter = () => (
                 <Route exact path='/portfolio/:id' component={PortfolioPages}/>
                 <Route exact path='/contactme' component={ContactMe}/>
                 <Route exact path='/aboutme' component={AboutMe}/>
+                <Route exact path='/blog' component={Blog}/>
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
+import FullPage_Menu from './FullPage_Menu';
 import Header_dropDown from '../components/Header_dropDown';
-import ProgressBar from './ProgressBar';
 import SkillsBar from './SkillsBar';
 import Menu from './Menu';
 
@@ -34,11 +34,7 @@ class AboutMe extends React.Component{
     render(){
         return(
             <div className="aboutme">
-            <Header_dropDown handleMenduClick={this.handleMenuClick}/>
-                <div className={this.state.menuState===true ?'menu subMenu-open':'menu subMenu-close'}>
-                    <Menu/>
-                </div>
-
+                <FullPage_Menu/>
             <section>
                 
                 <div className="wrap spacetop">
