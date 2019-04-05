@@ -2,9 +2,14 @@ import React from 'react';
 import Header_dropDown from '../components/Header_dropDown';
 import ProgressBar from './ProgressBar';
 import SkillsBar from './SkillsBar';
+import Menu from './Menu';
 
 class AboutMe extends React.Component{
 
+    state ={
+        menuState: false,
+        subMenu: 'menu subMenu-close',
+    }
     handleGithubClick = () => {
 
         window.open("https://github.com/KofiGharteyTagoe/", '_blank');
@@ -14,12 +19,28 @@ class AboutMe extends React.Component{
         window.open("https://www.linkedin.com/in/kofi-a-ghartey-tagoe-6a899b58/", '_blank');
     };
 
+    handleMenuClick = () =>{
+        this.setState(() =>({menuState:!this.state.menuState}));
+
+        document.body.classList.toggle("hideOverflow");
+    }
+
+    componentWillUnmount(){
+        document.body.classList.remove("hideOverflow");
+    }
+
+
+
     render(){
         return(
             <div className="aboutme">
-            <section>
-                <Header_dropDown/>
+            <Header_dropDown handleMenduClick={this.handleMenuClick}/>
+                <div className={this.state.menuState===true ?'menu subMenu-open':'menu subMenu-close'}>
+                    <Menu/>
+                </div>
 
+            <section>
+                
                 <div className="wrap spacetop">
                     <div className="qualities ">
 
@@ -87,6 +108,7 @@ class AboutMe extends React.Component{
 
                 
                 </section>
+
             </div>
         )
     }
