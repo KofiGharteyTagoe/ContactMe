@@ -1,16 +1,9 @@
 import React from 'react';
 import FullPage_Menu from './FullPage_Menu';
+import SocialMediaLinks from './SoialMediaLinks';
+
 
 class ContactMe extends React.Component{
-    
-    handleGithubClick = () => {
-
-        window.open("https://github.com/KofiGharteyTagoe/", '_blank');
-    };
-
-    handleLinkedinClick = () => {
-        window.open("https://www.linkedin.com/in/kofi-a-ghartey-tagoe-6a899b58/", '_blank');
-    };
 
     render(){
 
@@ -22,10 +15,7 @@ class ContactMe extends React.Component{
                         <div className="wrap">
                             <div className="intro-header">
                                 <h1> Get in touch
-                                <div className="linkImages">
-                                <div className="github-img icon-img" onClick={this.handleGithubClick} ></div>
-                                <div className="linkedin-img icon-img" onClick={this.handleLinkedinClick}></div>
-                                </div>
+                                    <SocialMediaLinks/>
                                 </h1>
 
                                 <div className="html-content">

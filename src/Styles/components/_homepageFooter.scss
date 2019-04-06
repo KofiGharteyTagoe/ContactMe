@@ -69,6 +69,25 @@ footer{
       margin-bottom: 20px;
     }
   }
+
+  .FullHeaderDiv{
+    display:none;
+  }
+  .HeaderDiV{
+    display: block;
+  }
+
+    /* Responsive floating menu */
+    @media screen and (max-width: 900px) {
+
+      .HeaderDiv{
+        display: none;
+      }
+
+      .FullHeaderDiv{
+        display:block;
+      }
+    }
   
   /* Style the counter cards */
   .card {
@@ -79,7 +98,7 @@ footer{
     text-align: center;
     background: #d8d8e0;    
     justify-content: space-evenly;
-    width: 220px;
+    width: 15.71vw;
     height: 350px;
     margin: 22px;
     color: #470101;

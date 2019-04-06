@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import HomePageFooter from './HomePageFooter';
 import HomePageMidSection from './HomePageMidSection';
+import FullPage_Menu from './FullPage_Menu';
 
 class Home extends React.Component{
 
@@ -30,11 +31,22 @@ class Home extends React.Component{
         return(
             <div className="Home">
                 
+                <div className="HeaderDiv">
                     <Header
                         blurred={this.HandleOptionsClick}
                         barsClassName={this.state.barsClassName}
                         changeBarsClassName={this.HandleShowMenuClick}
-                    />
+                    />                
+                </div>
+
+                <div className="FullHeaderDiv">
+                    <FullPage_Menu
+                    barsClassName={this.state.barsClassName}
+                    changeBarsClassName={this.HandleShowMenuClick}
+                    /> 
+                </div>
+
+
 
                 <section className={this.state.isBlured} >
                     <HomePageMidSection

@@ -7,10 +7,11 @@ class FullPage_Menu extends React.Component{
     state ={
         menuState: false,
         subMenu: 'menu subMenu-close',
+        barsClassName: false
     }
 
     handleMenuClick = () =>{
-        this.setState(() =>({menuState:!this.state.menuState}));
+        this.setState(() =>({menuState:!this.state.menuState, barsClassName: !this.state.barsClassName}));
     
         document.body.classList.toggle("hideOverflow");
     };
@@ -22,7 +23,7 @@ class FullPage_Menu extends React.Component{
     render(){
         return(
             <div>
-                <Header_dropDown handleMenduClick={this.handleMenuClick}/>
+                <Header_dropDown barsClassName={this.state.barsClassName} handleMenuClick={this.handleMenuClick}/>
                 <div className={this.state.menuState===true ?'menu subMenu-open':'menu subMenu-close'}>
                     <Menu/>
                 </div>

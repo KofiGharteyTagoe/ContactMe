@@ -19,7 +19,7 @@ class Header_dropDown extends React.Component{
                 <header>
                     <div className="headerSection">
                         <NavLink to="/"> <span className="logo"> KOFI | AGT</span> </NavLink>
-                        <div className={this.props.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={this.props.handleMenduClick}></div>
+                        <div className={this.props.barsClassName===true ?'menu-toggle-open':'menu-toggle-close'} onClick={this.props.handleMenuClick}></div>
                     </div>
                 </header>
         )

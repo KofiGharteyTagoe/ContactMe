@@ -3,6 +3,7 @@ import FullPage_Menu from './FullPage_Menu';
 import Header_dropDown from '../components/Header_dropDown';
 import SkillsBar from './SkillsBar';
 import Menu from './Menu';
+import SocialMediaLinks from './SoialMediaLinks';
 
 class AboutMe extends React.Component{
 
@@ -10,25 +11,6 @@ class AboutMe extends React.Component{
         menuState: false,
         subMenu: 'menu subMenu-close',
     }
-    handleGithubClick = () => {
-
-        window.open("https://github.com/KofiGharteyTagoe/", '_blank');
-    };
-
-    handleLinkedinClick = () => {
-        window.open("https://www.linkedin.com/in/kofi-a-ghartey-tagoe-6a899b58/", '_blank');
-    };
-
-    handleMenuClick = () =>{
-        this.setState(() =>({menuState:!this.state.menuState}));
-
-        document.body.classList.toggle("hideOverflow");
-    }
-
-    componentWillUnmount(){
-        document.body.classList.remove("hideOverflow");
-    }
-
 
 
     render(){
@@ -66,10 +48,7 @@ class AboutMe extends React.Component{
 
                     <div className="intro-header spacetop">
                     <h1> About Me
-                    <div className="linkImages">
-                    <div className="github-img icon-img" onClick={this.handleGithubClick} ></div>
-                    <div className="linkedin-img icon-img" onClick={this.handleLinkedinClick}></div>
-                    </div>
+                        <SocialMediaLinks/>
                     </h1>
 
                     <div className="html-content">
