@@ -1,12 +1,11 @@
 import React from 'react';
 import { Router, Route, NavLink} from 'react-router-dom';
-
-import FullPage_Menu from './FullPage_Menu';
+import Header_Selector from '../components/Header_Selector';
 
 const Portfolio = () =>{
     return(
         <div>
-        <FullPage_Menu/>
+        <Header_Selector/>
         <h2> Portfolio Home Page </h2>
         <p> Checkout the following things I've done:</p>
 

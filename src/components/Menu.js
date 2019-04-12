@@ -7,12 +7,12 @@ class Menu extends React.Component{
         return(
                     <nav className="menuNav">
                         <div className="menuDiv">
-                            <ul className="pulse">
+                            <ul>
                                 <li>  <NavLink exact to="/"> Home </NavLink> </li>
                                 <li>  <NavLink exact to="/aboutme"> About me </NavLink> </li>
-                                <li>  <NavLink exact to="/contactme"> Contact me </NavLink> </li>
                                 <li>  <NavLink exact to="/portfolio"> Porfolio </NavLink> </li>
                                 <li>  <NavLink exact to="/blog"> Blog </NavLink> </li>
+                                <li>  <NavLink exact to="/contactme"> Contact me </NavLink> </li>
                             </ul>
                         </div>
                     </nav>                           

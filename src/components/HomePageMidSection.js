@@ -16,7 +16,7 @@ class HomePageMidSection extends React.Component{
             </div>
             <div className="HomePageText">
                 <h1> Just a web dev </h1>
-                <p> I try to find easier and more intuitive ways to make people's (and sometimes, robots) lives better.</p>
+                <p> I try to find intuitive ways to make people's (and sometimes, robots) lives easier.</p>
             </div>
                 <div className="clickToExplore" onClick={()=>{this.props.explore(); this.props.changeBarsClassName()}}>
                 <span className="text"> Click to explore </span>

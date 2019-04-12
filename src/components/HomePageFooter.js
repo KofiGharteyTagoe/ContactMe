@@ -23,17 +23,6 @@ class HomePageFooter extends React.Component{
                 <div className="shadow"></div>
               </div>
             </NavLink>
-
-            <NavLink to="/contactme">
-              <div className= {`${this.props.cardsShow} column`}>
-                <div className="card">
-                <div className="menu-options contactme-option"></div>
-                <hr/>
-                  <p>Contact Me</p>
-                </div>
-                <div className="shadow"></div>
-              </div>
-            </NavLink>
             
             <NavLink to="/portfolio">
               <div className="column">
@@ -56,6 +45,18 @@ class HomePageFooter extends React.Component{
                 <div className="shadow"></div>
               </div>
             </NavLink>
+
+            <NavLink to="/contactme">
+              <div className= {`${this.props.cardsShow} column`}>
+                <div className="card">
+                <div className="menu-options contactme-option"></div>
+                <hr/>
+                  <p>Contact Me</p>
+                </div>
+                <div className="shadow"></div>
+              </div>
+            </NavLink>
+
           </div> 
             </div>
 

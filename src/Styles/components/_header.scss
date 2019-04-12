@@ -120,7 +120,6 @@ Header{
     display: flex;
     justify-content: center;
     height: 100vh;
-}
 
 .menuDiv{
     margin: auto;
@@ -150,7 +149,78 @@ Header{
           }
 
     }
+}
       
+}
+
+.bigDeviceNav {
+    position: absolute;
+    top: 42px;
+    right: 110px;
+}
+
+.bigDeviceNav * {
+    display: inline;
+    margin: 11px;
+    color: white;
+}
+
+
+.bigDeviceNav ul li{
+    position: relative;
+ }
+
+.bigDeviceNav ul li:before{
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -13px;
+    background-color: #fff;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+
+.bigDeviceNav ul li:hover:before{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.bigDeviceNav ul li .active{
+    font-weight: 700;
+}
+
+.bigDeviceNav ul li .active{
+    content: "";
+    position: relative;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    color: #fff;
+}
+
+.bigDeviceNav ul li .active:before{
+    content: "";
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -13px;
+    background-color: #fff;
+}
+
+.Header_WithNav{
+    display: block;
+}
+
+.Header_dropDown{
+    display: none;
 }
 
 @media(max-width: $desktop-breakpoint){
@@ -166,4 +236,17 @@ Header{
         }
 
     }
+}
+
+@media(max-width: 950px){
+
+    .Header_WithNav{
+        display: none;
+    }
+    
+    .Header_dropDown{
+        display: block;
+    }
+
+
 }

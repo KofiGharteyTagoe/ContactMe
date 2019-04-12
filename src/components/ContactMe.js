@@ -1,5 +1,5 @@
 import React from 'react';
-import FullPage_Menu from './FullPage_Menu';
+import Header_Selector from '../components/Header_Selector';
 import SocialMediaLinks from './SoialMediaLinks';
 
 
@@ -9,7 +9,7 @@ class ContactMe extends React.Component{
 
         return(
             <div>
-                <FullPage_Menu/>
+                <Header_Selector/>
                 <div className="otherPageCartoon" alt="Cartoon Image"> </div>
                     <section className="contact-page page">
                         <div className="wrap">

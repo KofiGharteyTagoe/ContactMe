@@ -1,0 +1,53 @@
+
+.recommendationsSection{
+    background: white;
+    border-radius: 0px;
+    color: black;
+    padding-top: 100px;
+}
+
+.recommendationsSection .intro-header h1{
+    color: black;
+}
+
+.recommendationsSection .intro-header h1:after{
+    background-color: black;
+}
+
+.rec-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.recommendation{
+    //display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    float: left;
+
+    p{
+        font-style: italic;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+@media(max-width: 1000px){
+
+    .rec-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 630px){
+    .wrap .rec-header h1{
+        font-size: 40px;
+    }
+
+    .rec-group{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
