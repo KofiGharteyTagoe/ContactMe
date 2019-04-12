@@ -1,7 +1,8 @@
 .portfolio-group{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
+    grid-gap: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card-container{
@@ -10,9 +11,9 @@
     background: white;
     color: black;
     margin: 0 auto;
-    display: grid;
     position: relative;
     border: 1px solid #bfbfbf;
+    margin: 6px auto;
 }
 
 .card-container h3{
@@ -40,13 +41,17 @@
     top: 50%;
 }
 
+.blogContent h3{
+    font-size: 25px;
+}
+
 .cardLinks{
     position: absolute;
     border-radius: 0px;
     background: rgba(0, 0, 0, 0.904);
     width: 100%;
-    height: 50%;
-    top: 50%;
+    height: 53%;
+    top: 47%;
     display: inline-flex;
     opacity: 0;
     transition: opacity .50s ease-in-out;
@@ -74,10 +79,10 @@
     }
 }
 
-.portfolio .cardSection{
-    background: white;
+.portfolio .cardSection, .blog .cardSection{
+    background: #ffffff05;
     padding: 20px 0px 20px 0px;
-    border-radius: 0px;
+    border-radius: 5px;
 }
 
 .webLink{
@@ -102,11 +107,41 @@
     font-size: 70px;
 }
 
+//Breakpoints
+
+
+@media(max-width: 720px){
+
+
+    .cardLinks{
+        position: absolute;
+        border-radius: 0px;
+        background: rgba(96, 114, 173, 0.808);
+        width: 100%;
+        height: 50%;
+        top: 0%;
+        display: inline-flex;
+        opacity: 1;
+    }
+}
+
+
 //Images
 
+
 .myportfolio{
+    @extend .imageParent;
     background: url("./../images/CardImages/MyPortfolioImage.png");
+
+}
+
+.sagaBlog{
+    @extend .imageParent;
+    background: url("./../images/CardImages/sagaBlog.jpg");
+}
+
+.imageParent{
     background-size: 100% 100%;
     width: 100%;
-    height: 50%;
+    height: 47%;
 }

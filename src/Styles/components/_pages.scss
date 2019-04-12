@@ -11,7 +11,7 @@ section{
     display: block;
 }
 
-.contact-page, .aboutme, .portfolio{
+.contact-page, .aboutme, .portfolio, .blog{
 
     .intro-header{
         display: flex;
@@ -328,7 +328,7 @@ input, textfield:focus{
         margin-top: 0em; 
     }
 
-    .contact-page, .aboutme, .portfolio{
+    .contact-page, .aboutme, .portfolio, .blog{
         .wrap>.intro-header{
             display: block;
         }

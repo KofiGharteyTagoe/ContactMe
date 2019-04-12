@@ -1,6 +1,5 @@
 import React from 'react';
 import Header_Selector from '../components/Header_Selector';
-import SkillsBar from './SkillsBar';
 import SocialMediaLinks from './SoialMediaLinks';
 
 class AboutMe extends React.Component{

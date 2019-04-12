@@ -5,22 +5,25 @@ import SocialMediaLinks from './SoialMediaLinks';
 
 const Portfolio = () =>{
     return(
-        <div className="portfolio">
-        <Header_Selector/>
-        <div className="intro-header wrap spacetop">
-            <h1> My Portfolio
-                <SocialMediaLinks/>
-            </h1>
 
-            <div className="html-content">
-                <p>
-                If you’d like to get started on creating something brilliant with me, simply fill out the form below. When you are sending me a message about your project, let me know your idea, where you’re located and the timeline you’re looking at.
-                </p>
+        <div className="portfolio">
+            <Header_Selector/>
+
+        <div className="wrap">
+            <div className="intro-header spacetop">
+                <h1> My Portfolio
+                    <SocialMediaLinks/>
+                </h1>
+
+                <div className="html-content">
+                    <p>
+                    If you’d like to get started on creating something brilliant with me, simply fill out the form below. When you are sending me a message about your project, let me know your idea, where you’re located and the timeline you’re looking at.
+                    </p>
+                </div>
             </div>
         </div>
-
         <section className="cardSection">
-            <div className="portfolio-group wrap space-top">
+            <div className="portfolio-group spacetop">
 
             <div className="card-container"> 
                 <div className="cardImage myportfolio"></div>
@@ -36,6 +39,7 @@ const Portfolio = () =>{
 
             </div>
         </section>
+
 
 
         </div>
