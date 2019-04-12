@@ -1,0 +1,112 @@
+.portfolio-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card-container{
+    width: 370px;
+    height: 400px;
+    background: white;
+    color: black;
+    margin: 0 auto;
+    display: grid;
+    position: relative;
+    border: 1px solid #bfbfbf;
+}
+
+.card-container h3{
+    margin: 20px;
+    font-size: 30px;
+}
+
+.card-container p{
+    margin: 20px;
+}
+
+.card-container .cardImage{
+    //position: absolute;
+    grid-row: 1;
+    border-radius: 0px;
+
+    border: gray;
+}
+
+.cardContent{
+    position: absolute;
+    border-radius: 0px;
+    width: 100%;
+    height: 50%;
+    top: 50%;
+}
+
+.cardLinks{
+    position: absolute;
+    border-radius: 0px;
+    background: rgba(0, 0, 0, 0.904);
+    width: 100%;
+    height: 50%;
+    top: 50%;
+    display: inline-flex;
+    opacity: 0;
+    transition: opacity .50s ease-in-out;
+    -moz-transition: opacity .50s ease-in-out;
+    -webkit-transition: opacity .50s ease-in-out;
+}
+
+.cardLinks span{
+    margin: 50px auto;
+    cursor: pointer;
+    transition: transform .2s; /* Animation */
+    p{
+        color: white;
+        font-size: 18px;
+    }
+}
+
+.cardLinks span:hover{
+    transform: scale(1.2)
+}
+
+.card-container:hover{
+    .cardLinks{
+        opacity: 1;
+    }
+}
+
+.portfolio .cardSection{
+    background: white;
+    padding: 20px 0px 20px 0px;
+    border-radius: 0px;
+}
+
+.webLink{
+    text-align: center;
+}
+
+.webLink::before{
+    font-family: fontAwesome;
+    content: '\f0ac';
+    color: white;
+    font-size: 70px;
+}
+
+.cardLinks p{
+    margin: 0px !important;
+}
+
+.gitHubLink::before{
+    font-family: fontAwesome;
+    content: '\f09b';
+    color: white;
+    font-size: 70px;
+}
+
+//Images
+
+.myportfolio{
+    background: url("./../images/CardImages/MyPortfolioImage.png");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 50%;
+}
