@@ -2,8 +2,27 @@ import React from 'react';
 import Header_Selector from '../components/Header_Selector';
 import SocialMediaLinks from './SoialMediaLinks';
 
-
 class ContactMe extends React.Component{
+
+    state={
+        fullname: undefined,
+        email: undefined,
+        phonenumber: undefined,
+        message: undefined,
+        mailSent: false,
+        error: null
+    }
+
+    updateFields = (field, value) =>{
+        this.setState({
+            [field]:value
+          })
+    }
+
+    submitContactForm = (e) =>{
+        e.preventDefault(); 
+    }
+
 
     render(){
 
@@ -31,30 +50,36 @@ class ContactMe extends React.Component{
 
                         <div className="wrap form-wrap">
                             <div className="form-container">
-                                <form className="enquiry-form light">
+                                <form onSubmit={this.submitContactForm} className="enquiry-form light">
                                     <label className="field full-width">
                                         <span> Full name </span>
-                                            <input type="text" name="fullname" placeholder="Your full name" required></input>
+                                            <input onChange={(event) =>{this.updateFields('fullname', event.target.value) }} type="text" name="fullname" placeholder="Your full name" required></input>
                                     </label>
 
                                     <label className="field half-width half-width-left">
                                     <span> Email address </span>
-                                        <input type="email" name="email" id="email" placeholder="Your email" required></input>
+                                        <input onChange={(event) =>{this.updateFields('email', event.target.value) }} type="email" name="email" id="email" placeholder="Your email" required></input>
                                     </label>
 
                                     <label className="field half-width half-width-right">
                                     <span> Phone number </span>
-                                        <input type="tel" pattern="^\+?\d{0,13}" name="phone" placeholder="Your phone number" required></input>
+                                        <input onChange={(event) =>{this.updateFields('phonenumber', event.target.value) }} type="tel" pattern="^\+?\d{0,13}" name="phone" placeholder="Your phone number" required></input>
                                     </label>
 
                                     <label className="field full-width">
                                     <span> Leave a message </span>
-                                        <textarea type="tel"  name="message" placeholder="Your message" required></textarea>
+                                        <textarea onChange={(event) =>{this.updateFields('message', event.target.value) }} type="text"  name="message" placeholder="Your message" required></textarea>
                                     </label>
 
                                     <button className="sendButton" type="submit">
                                     <span> Send </span>
                                     </button>
+
+                                    <div>
+                                        {this.state.mailSent &&
+                                            <div>Thank you for contcting us.</div>
+                                        }
+                                    </div>
                                 </form>
                             </div>
                         </div>

@@ -301,16 +301,6 @@ input, textfield:focus{
     height: 100vh;
 }
 
-.personalImg{
-    border: 2px solid #0a1823;
-    box-shadow: 0 0 19px rgba(2,2,2,0.5);
-    background-size: 100% 100%;
-    width: 380px;
-    height: 760px;
-    background-image: url(./../images/kofestar-animation.gif);
-    object-fit: contain;
-}
-
 .cImage{
     display: none;
 }

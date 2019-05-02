@@ -16,11 +16,7 @@ class Header_WithNav extends React.Component{
 
                     <div className="bigDeviceNav">
                         <ul>
-                            <li>  <NavLink exact to="/"> Home </NavLink> </li>
-                            <li>  <NavLink exact to="/aboutme"> About me </NavLink> </li>
-                            <li>  <NavLink exact to="/portfolio"> Porfolio </NavLink> </li>
-                            <li>  <NavLink exact to="/blog"> Blog </NavLink> </li>
-                            <li>  <NavLink exact to="/contactme"> Contact me </NavLink> </li>
+                            <li>  <NavLink exact to="/"> Contact Me </NavLink> </li>
                         </ul>
                     </div>
                 </section>
